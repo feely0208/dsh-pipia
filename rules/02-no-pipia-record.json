@@ -1,0 +1,14 @@
+{
+  "id": "PIPIA-NO-RECORD",
+  "title": "仓库里找不到个人信息保护影响评估记录",
+  "severity": "medium",
+  "source": "《个人信息保护法》第五十六条 —— 个人信息保护影响评估报告和处理情况记录应当至少保存三年",
+  "advice": "文档里找不到影响评估报告或处理情况记录。个保法第 56 条明确要求**评估报告和处理情况记录至少保存三年**。这不只是「做没做」的问题 —— 监管检查时会直接要求出示。建议在仓库的 docs/ 或 SECURITY.md 里记录：评估时间、评估事项、结论、保存位置。",
+  "check": {
+    "type": "files-lack",
+    "pattern": "影响评估|PIPIA|DPIA|privacy impact|个人信息保护影响评估|评估报告|合规评估",
+    "flags": "i",
+    "paths": ["README.md", "PRIVACY.md", "SECURITY.md", "docs/*.md", "docs/**/*.md", "*.md", "compliance/*"],
+    "evidence": "文档里找不到影响评估报告或记录"
+  }
+}

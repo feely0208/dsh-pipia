@@ -1,0 +1,15 @@
+{
+  "id": "PIPIA-NO-RETENTION",
+  "title": "评估记录没有保存期限说明",
+  "severity": "low",
+  "source": "《个人信息保护法》第五十六条 —— 个人信息保护影响评估报告和处理情况记录应当至少保存三年",
+  "advice": "文档里虽有评估相关内容，但没写保存期限。个保法第 56 条要求至少保存**三年** —— 建议写明「评估报告保存 X 年」并指定保管人，否则三年后无人能证明当时做过评估。",
+  "check": {
+    "type": "files-lack",
+    "pattern": "保存三年|至少三年|保存3年|至少3年|保存期限|三年以上|retain.*three|3 years",
+    "flags": "i",
+    "paths": ["README.md", "PRIVACY.md", "SECURITY.md", "docs/*.md", "docs/**/*.md", "*.md"],
+    "when": "影响评估|PIPIA|DPIA|privacy impact",
+    "evidence": "提到了评估，但没写评估记录的保存期限"
+  }
+}

@@ -1,0 +1,73 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>深鲸守护 · 个人信息保护影响评估 · 检查报告</title>
+<style>
+  :root{--bg:#0b1018;--fg:#e6edf6;--muted:#8b9bb4;--line:#1e2a3a;--card:#121a26}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.6 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif;padding:32px}
+  .wrap{max-width:1180px;margin:0 auto}
+  h1{font-size:22px;margin:0 0 4px}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:20px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:20px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .card .k{color:var(--muted);font-size:12px;margin-bottom:6px}
+  .card .v{font-size:20px;font-weight:700}
+  .chip{display:inline-block;padding:3px 10px;border-radius:999px;margin:0 6px 6px 0;font-size:13px;
+        border:1px solid var(--c);color:var(--c)}
+  .chip b{font-size:15px}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;font-size:13px}
+  th{color:var(--muted);font-weight:500;background:#0e1622}
+  tr:last-child td{border-bottom:0}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--c);margin-right:6px}
+  .t{font-weight:600;margin-bottom:2px}
+  .src{color:var(--muted);font-size:12px}
+  code{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#7dd3fc}
+  .ev{color:var(--muted);font-size:12px;margin-top:2px;word-break:break-all}
+  .adv{color:var(--muted);font-size:12px;max-width:260px}
+  .ok{background:#0d2b1a;border:1px solid #1d7a4a;color:#4ade80;padding:16px;border-radius:12px;margin-bottom:20px}
+  .warn{background:#2b1f0d;border:1px solid #a16207;color:#fbbf24;padding:12px 16px;border-radius:12px;margin-bottom:20px;font-size:13px}
+  footer{color:var(--muted);font-size:12px;margin-top:22px;padding-top:14px;border-top:1px solid var(--line)}
+  footer p{margin:3px 0}
+</style></head><body><div class="wrap">
+  <h1>深鲸守护 · 个人信息保护影响评估</h1>
+  <div class="sub">查是否按个保法 55 条做了影响评估、按 56 条留存三年 —— 敏感信息处理必须事前评估</div>
+
+  <div class="cards">
+    <div class="card"><div class="k">扫描文件</div><div class="v">2</div></div>
+    <div class="card"><div class="k">检查规则</div><div class="v">3<span style="font-size:13px;color:var(--muted)">/4</span></div></div>
+    <div class="card"><div class="k">命中</div><div class="v" style="color:#ea580c">3</div></div>
+    <div class="card"><div class="k">已跳过目录</div><div class="v">0</div></div>
+  </div>
+
+  
+  <div class="warn">⚠️ 扫描到的文件很少，请确认扫描目录是否正确 —— <b>不要因「全绿」就放心</b>。</div>
+  
+
+  <div style="margin-bottom:16px"><span class="chip" style="--c:#ea580c">高 <b>2</b></span><span class="chip" style="--c:#ca8a04">中 <b>1</b></span></div>
+       <table><thead><tr><th>级别</th><th>问题</th><th>位置 / 证据</th><th>建议</th></tr></thead>
+       <tbody>
+      <tr class="sev-high">
+        <td><span class="dot" style="--c:#ea580c"></span>高</td>
+        <td><div class="t">处理敏感个人信息，但找不到影响评估痕迹</div><div class="src">《个人信息保护法》第五十五条 —— 处理敏感个人信息、利用个人信息进行自动化决策、委托处理/对外提供/公开个人信息、向境外提供个人信息、其他对个人权益有重大影响的处理活动，应当事前进行个人信息保护影响评估并记录处理情况</div></td>
+        <td><code>README.md</code><div class="ev">以下文件都不存在：README.md / PRIVACY.md / SECURITY.md …</div></td>
+        <td class="adv">代码里出现了敏感个人信息的处理（生物识别、医疗健康、金融账户、行踪轨迹等），但仓库里找不到【影响评估】的痕迹。个保法第 55 条把这列为强制性事前义务 —— 不是「最好做」，是「必须做」。做法：评估 → 出报告 → 留存（第 56 条要求至少三年）。</td>
+      </tr>
+      <tr class="sev-high">
+        <td><span class="dot" style="--c:#ea580c"></span>高</td>
+        <td><div class="t">对外提供个人信息，但找不到评估痕迹</div><div class="src">《个人信息保护法》第五十五条 —— 委托处理个人信息、向其他个人信息处理者提供个人信息、公开个人信息，应当事前进行个人信息保护影响评估，并对处理情况进行记录</div></td>
+        <td><code>README.md</code><div class="ev">以下文件都不存在：README.md / PRIVACY.md / SECURITY.md …</div></td>
+        <td class="adv">代码里有对外提供个人信息的痕迹（第三方共享、数据推送、同步接口），但找不到影响评估记录。个保法第 55 条把「对外提供」明确列为必须事前评估的情形。建议建立第三方清单（谁、拿什么数据、用途、法律依据），每次新增前做评估。</td>
+      </tr>
+      <tr class="sev-medium">
+        <td><span class="dot" style="--c:#ca8a04"></span>中</td>
+        <td><div class="t">仓库里找不到个人信息保护影响评估记录</div><div class="src">《个人信息保护法》第五十六条 —— 个人信息保护影响评估报告和处理情况记录应当至少保存三年</div></td>
+        <td><code>README.md</code><div class="ev">以下文件都不存在：README.md / PRIVACY.md / SECURITY.md …</div></td>
+        <td class="adv">文档里找不到影响评估报告或处理情况记录。个保法第 56 条明确要求<b>评估报告和处理情况记录至少保存三年</b>。这不只是「做没做」的问题 —— 监管检查时会直接要求出示。建议在仓库的 docs/ 或 SECURITY.md 里记录：评估时间、评估事项、结论、保存位置。</td>
+      </tr></tbody></table>
+
+  <footer>
+    <p>扫描范围：<code>tests/fixtures/fail/demo-project</code> · 2 个文件</p>
+    <p>规则库：— · 生成时间：2026-10-14 03:12:12</p>
+    <p></p>
+  </footer>
+</div></body></html>
