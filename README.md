@@ -48,7 +48,11 @@ dsh plugin --profile web add @deepwhale-cn/dsh-pipia
 npx @deepwhale-cn/dsh-pipia
 ```
 
-![dsh-pipia 的检查报告示例](https://www.deepwhale.org.cn/plugin-assets/dsh-pipia/report.png)
+![dsh-pipia 检查报告示例](https://www.deepwhale.org.cn/plugin-assets/dsh-pipia/report.png)
+
+![dsh-pipia 演示模式输出](https://www.deepwhale.org.cn/plugin-assets/dsh-pipia/demo.png)
+
+![dsh-pipia 规则与依据](https://www.deepwhale.org.cn/plugin-assets/dsh-pipia/rules.png)
 
 ## 用法
 
