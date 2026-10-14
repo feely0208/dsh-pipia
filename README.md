@@ -48,6 +48,8 @@ dsh plugin --profile web add @deepwhale-cn/dsh-pipia
 npx @deepwhale-cn/dsh-pipia
 ```
 
+![dsh-pipia 的检查报告示例](https://raw.githubusercontent.com/feely0208/dsh-pipia/main/docs/report.png)
+
 ## 用法
 
 ```bash
