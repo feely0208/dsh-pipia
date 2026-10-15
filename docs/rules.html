@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; background:#0d0f13; display:flex; justify-content:center;
+         align-items:flex-start; padding:22px; font-family:-apple-system,"PingFang SC",
+         "Helvetica Neue",sans-serif; }
+  .win { width:1180px; border-radius:11px; overflow:hidden;
+          box-shadow:0 14px 44px rgba(0,0,0,.55); }
+  .bar { background:#2a2d34; padding:11px 15px; display:flex; align-items:center; gap:9px; }
+  .dot { width:12px; height:12px; border-radius:50%; }
+  .t { margin-left:11px; color:#7a8290; font-size:13px; letter-spacing:.02em; }
+  .term { background:#1b1d22; padding:20px 22px 24px; font-family:"SF Mono",Menlo,Consolas,
+           "PingFang SC",monospace; font-size:13.5px; line-height:1.72; }
+  .cmd { color:#5ee08a; margin-bottom:13px; font-size:13.5px; }
+  .cmd b { color:#fff; font-weight:600; }
+  .l { white-space:pre-wrap; word-break:break-word; }
+</style></head><body>
+  <div class="win">
+    <div class="bar">
+      <span class="dot" style="background:#ff5f57"></span>
+      <span class="dot" style="background:#febc2e"></span>
+      <span class="dot" style="background:#28c840"></span>
+      <span class="t">dsh-pipia · rules</span>
+    </div>
+    <div class="term">
+      <div class="cmd">$ <b>dsh-pipia --list-rules</b></div>
+      <div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  深鲸守护 · 个人信息保护影响评估 —— 4 条规则</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  [high] PIPIA-SENSITIVE-NO-ASSESS</span></div>
+<div class="l"><span style="color:#d8dee9">        处理敏感个人信息，但找不到影响评估痕迹</span></div>
+<div class="l"><span style="color:#7a8290">        依据：《个人信息保护法》第五十五条 —— 处理敏感个人信息、利用个人信息进行自动化决策、委托处理/对外提供/公开个人信息、向境外提供个人信息、其他对个人权益有重大影响的处理活动，应当事前进行个人信息保护影响评估并记录处理情况</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  [medium] PIPIA-NO-RECORD</span></div>
+<div class="l"><span style="color:#d8dee9">        仓库里找不到个人信息保护影响评估记录</span></div>
+<div class="l"><span style="color:#7a8290">        依据：《个人信息保护法》第五十六条 —— 个人信息保护影响评估报告和处理情况记录应当至少保存三年</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  [high] PIPIA-THIRD-PARTY-NO-ASSESS</span></div>
+<div class="l"><span style="color:#d8dee9">        对外提供个人信息，但找不到评估痕迹</span></div>
+<div class="l"><span style="color:#7a8290">        依据：《个人信息保护法》第五十五条 —— 委托处理个人信息、向其他个人信息处理者提供个人信息、公开个人信息，应当事前进行个人信息保护影响评估，并对处理情况进行记录</span></div>
+<div class="l"><span style="color:#7a8290">&nbsp;</span></div>
+<div class="l"><span style="color:#d8dee9">  [low] PIPIA-NO-RETENTION</span></div>
+<div class="l"><span style="color:#d8dee9">        评估记录没有保存期限说明</span></div>
+<div class="l"><span style="color:#7a8290">        依据：《个人信息保护法》第五十六条 —— 个人信息保护影响评估报告和处理情况记录应当至少保存三年</span></div>
+    </div>
+  </div>
+</body></html>

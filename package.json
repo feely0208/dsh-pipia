@@ -1,6 +1,6 @@
 {
   "name": "@deepwhale-cn/dsh-pipia",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "查是否按个保法 55 条做了影响评估、按 56 条留存三年 —— 敏感信息处理必须事前评估",
   "type": "module",
   "license": "MIT",
@@ -22,12 +22,13 @@
   ],
   "files": [
     "lib",
-    "skill",
     "bin",
     "rules",
-    "docs",
+    "skill",
     "cordis.patch.yml",
-    "README.md"
+    "tests/fixtures",
+    "README.md",
+    "LICENSE"
   ],
   "main": "./lib/index.js",
   "exports": {
