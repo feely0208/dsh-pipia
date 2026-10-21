@@ -1,5 +1,7 @@
 # @deepwhale-cn/dsh-pipia
 
+[![dshfind 收录](https://dshfind.com/api/badge/feely0208/dsh-pipia?lang=zh)](https://dshfind.com/zh/plugins/feely0208/dsh-pipia)
+
 **个人信息保护影响评估** —— 查是否按个保法 55 条做了评估、56 条留存三年。
 
 ## 不装它会怎样
