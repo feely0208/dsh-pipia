@@ -21,7 +21,7 @@ A=$(node bin/cli.mjs --root tests/fixtures/absent/minimal --json 2>&1)
 NA=$(echo "$A" | python3 -c "
 import json,sys; d=json.load(sys.stdin)
 print(','.join((d.get('stats') or {}).get('notApplicable') or []))" 2>/dev/null)
-echo "$NA" | grep -q "PIPIA-SENSITIVE-NO-ASSESS" && ok "空缺样本：敏感信息规则不适用（$NA）" || bad "条件规则未生效（$NA）"
+echo "$NA" | grep -q "PIPIA-SENSITIVE-NO-ASSESS" && ok "空缺样本：敏感信息规则不适用（${NA}）" || bad "条件规则未生效（${NA}）"
 echo ""; echo "  【语义一致性】标题是 absence，实现必须是 files-lack"
 python3 - <<'PY' && ok "4 条规则语义一致" || bad "有规则标题与实现相反"
 import json,glob,sys
